@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Page</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <h1 id="greetingText">Hello World!</h1>
+
+    <!-- Button to change the name -->
+    <button onclick="changeName()">
+        Change Name
+    </button>
+
+    <!-- Button to change text color -->
+    <button onclick="changeColor()">
+        Change Text Color
+    </button>
+
+    <script>
+        // Function to change "World" to a user-entered name
+        function changeName() {
+            let newName = prompt("Enter a new name:");
+
+            if (newName !== null && newName !== "") {
+                document.getElementById("greetingText").innerHTML =
+                    "Hello " + newName + "!";
+            }
+        }
+
+        // Function to change the text color
+        function changeColor() {
+            document.getElementById("greetingText").style.color = "blue";
+        }
+    </script>
+
+</body>
+</html>
